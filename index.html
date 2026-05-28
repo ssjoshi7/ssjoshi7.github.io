@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swapnil Sunil Joshi — Technical Program Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1F3A;
+  --navy-mid: #132D52;
+  --teal: #00A896;
+  --teal-light: #02C39A;
+  --gold: #F4A261;
+  --cream: #F8F4EE;
+  --white: #FFFFFF;
+  --text-dim: #8A9BB0;
+  --card-bg: rgba(255,255,255,0.04);
+  --border: rgba(0,168,150,0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11,31,58,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--teal-light);
+  letter-spacing: -0.5px;
+}
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--teal-light); }
+
+/* HERO — CENTERED */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px 80px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.hero-bg-circle {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,168,150,0.12) 0%, transparent 70%);
+  top: -100px; right: -200px;
+  pointer-events: none;
+}
+.hero-bg-circle-2 {
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,162,97,0.06) 0%, transparent 70%);
+  bottom: 0; left: -100px;
+  pointer-events: none;
+}
+.hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,168,150,0.1);
+  border: 1px solid rgba(0,168,150,0.3);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--teal-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--teal-light);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+h1.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+  animation: fadeUp 0.8s 0.1s ease forwards;
+  opacity: 0;
+}
+h1.hero-name span { color: var(--teal-light); }
+.hero-title {
+  font-size: clamp(14px, 2vw, 17px);
+  color: var(--text-dim);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 36px;
+  animation: fadeUp 0.8s 0.2s ease forwards;
+  opacity: 0;
+}
+.hero-title strong { color: var(--white); font-weight: 500; }
+.hero-desc {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  max-width: 680px;
+  margin: 0 auto 48px;
+  animation: fadeUp 0.8s 0.3s ease forwards;
+  opacity: 0;
+}
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 52px;
+  justify-content: center;
+  animation: fadeUp 0.8s 0.4s ease forwards;
+  opacity: 0;
+}
+.stat { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--teal-light);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  animation: fadeUp 0.8s 0.5s ease forwards;
+  opacity: 0;
+}
+.btn-primary {
+  background: var(--teal);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background: var(--teal-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,168,150,0.3);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  border-color: var(--teal);
+  color: var(--teal-light);
+  transform: translateY(-2px);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SECTION COMMON */
+section { padding: 100px 60px; position: relative; z-index: 1; }
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.section-divider {
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--teal), transparent);
+  margin-bottom: 60px;
+  border-radius: 2px;
+}
+
+/* ACHIEVEMENTS */
+.achievements {
+  background: var(--navy-mid);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.achievement-card {
+  background: var(--navy-mid);
+  padding: 48px 40px;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.achievement-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0;
+  background: var(--teal);
+  transition: height 0.4s ease;
+}
+.achievement-card:hover::after { height: 100%; }
+.achievement-card:hover { background: rgba(0,168,150,0.05); }
+.achievement-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+.achievement-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--teal-light);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.achievement-title { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.achievement-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+/* EXPERIENCE */
+.experience { background: var(--navy); }
+.timeline { max-width: 900px; position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 16px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--teal), transparent);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 32px;
+  margin-bottom: 56px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.6s ease;
+}
+.timeline-item.visible { opacity: 1; transform: translateX(0); }
+.timeline-dot {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--navy-mid);
+  border: 2px solid var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.timeline-dot::after {
+  content: '';
+  width: 8px; height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+.timeline-content {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  transition: border-color 0.3s;
+}
+.timeline-content:hover { border-color: rgba(0,168,150,0.4); }
+.timeline-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.timeline-role { font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.timeline-company { font-size: 14px; color: var(--text-dim); margin-bottom: 16px; }
+.timeline-highlights { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.timeline-highlights li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+.timeline-highlights li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 12px;
+}
+
+/* SKILLS */
+.skills { background: var(--navy-mid); }
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; }
+.skill-category {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  transition: all 0.3s;
+}
+.skill-category:hover { border-color: rgba(0,168,150,0.4); transform: translateY(-4px); }
+.skill-cat-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag {
+  background: rgba(0,168,150,0.08);
+  border: 1px solid rgba(0,168,150,0.2);
+  color: rgba(255,255,255,0.8);
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.skill-tag:hover { background: rgba(0,168,150,0.18); border-color: var(--teal); color: var(--white); }
+
+/* PLATFORMS */
+.platforms { background: var(--navy); }
+.platforms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1000px; }
+.platform-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.platform-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,168,150,0.15);
+}
+.platform-icon { font-size: 36px; margin-bottom: 12px; display: block; }
+.platform-name { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.platform-years { font-size: 11px; color: var(--teal); font-family: 'DM Mono', monospace; }
+
+/* AI PROJECTS */
+.ai-project { background: var(--navy-mid); }
+.projects-grid { display: flex; flex-direction: column; gap: 28px; max-width: 900px; }
+.project-card {
+  background: linear-gradient(135deg, rgba(0,168,150,0.08), rgba(11,31,58,0.5));
+  border: 1px solid rgba(0,168,150,0.3);
+  border-radius: 20px;
+  padding: 44px 52px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.project-card:hover {
+  border-color: rgba(0,168,150,0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0,168,150,0.12);
+}
+.project-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--teal);
+  background: rgba(0,168,150,0.1);
+  border: 1px solid rgba(0,168,150,0.3);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.project-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+.project-metrics { display: flex; gap: 40px; margin-bottom: 28px; flex-wrap: wrap; }
+.project-metric { display: flex; flex-direction: column; gap: 4px; }
+.project-metric-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--teal-light);
+  font-weight: 700;
+}
+.project-metric-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.tech-stack { display: flex; gap: 10px; flex-wrap: wrap; }
+.tech-badge {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+}
+
+/* CERTIFICATIONS */
+.certifications { background: var(--navy); }
+.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; }
+.cert-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: all 0.3s;
+}
+.cert-card:hover { border-color: rgba(0,168,150,0.4); transform: translateY(-4px); }
+.cert-status {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.cert-status.progress { background: rgba(244,162,97,0.15); color: var(--gold); border: 1px solid rgba(244,162,97,0.3); }
+.cert-status.completed { background: rgba(0,168,150,0.15); color: var(--teal-light); border: 1px solid rgba(0,168,150,0.3); }
+.cert-name { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 6px; line-height: 1.4; }
+.cert-org { font-size: 12px; color: var(--text-dim); }
+
+/* CONTACT */
+.contact { background: var(--navy-mid); text-align: center; }
+.contact-inner { max-width: 640px; margin: 0 auto; }
+.contact-tagline { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 48px; }
+.contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 24px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.contact-link:hover { border-color: var(--teal); color: var(--teal-light); transform: translateY(-3px); }
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  border-top: 1px solid var(--border);
+  padding: 32px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-name { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--teal-light); }
+.footer-copy { font-size: 12px; color: var(--text-dim); }
+
+/* SCROLL ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  section { padding: 70px 24px; }
+  .hero { padding: 100px 24px 60px; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+  .achievements-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid { grid-template-columns: 1fr; }
+  .project-metrics { flex-wrap: wrap; gap: 24px; }
+  .project-card { padding: 28px 24px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SSJ</div>
+  <ul class="nav-links">
+    <li><a href="#achievements">Impact</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#platforms">Platforms</a></li>
+    <li><a href="#project">AI Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO — CENTERED -->
+<section class="hero">
+  <div class="hero-bg-circle"></div>
+  <div class="hero-bg-circle-2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Available Immediately &nbsp;·&nbsp; Open to Pan-India &amp; Remote</div>
+    <h1 class="hero-name">Swapnil<br><span>Sunil Joshi</span></h1>
+    <p class="hero-title">
+      <strong>Technical Program Manager</strong> &nbsp;|&nbsp; Enterprise Platform Leader &amp; SaaS Transformation &nbsp;|&nbsp; AI &amp; Automation
+    </p>
+    <p class="hero-desc">
+      Tech-PM hybrid with 11+ years of US enterprise experience. Built and led a $1.4M+ SaaS platform ecosystem at USC supporting 5,000+ users across seven cloud platforms — from Salesforce and Atlassian to DocuSign and ServiceNow. Developer roots in Java, Python, Java Script Frameworks, Apex &amp; REST APIs.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">11+</span>
+        <span class="stat-label">Years US Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">$1.4M</span>
+        <span class="stat-label">Portfolio Managed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">7</span>
+        <span class="stat-label">Cloud Platforms</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">5K+</span>
+        <span class="stat-label">Enterprise Users</span>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:swapniljoshi1729@gmail.com" class="btn-primary">Get In Touch</a>
+      <a href="#experience" class="btn-secondary">View Experience</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements" id="achievements">
+  <div style="text-align:center; margin-bottom: 60px;">
+    <p class="section-label">Impact &amp; Achievements</p>
+    <h2 class="section-title">Numbers That Matter</h2>
+    <div class="section-divider" style="margin: 0 auto;"></div>
+  </div>
+  <div class="achievements-grid reveal">
+    <div class="achievement-card">
+      <span class="achievement-icon">💰</span>
+      <div class="achievement-number">$100K</div>
+      <div class="achievement-title">Cost Saved — Single Initiative</div>
+      <div class="achievement-desc">Pushed back on a $100K DocuSign purchase with a data-driven POC, delivering the same solution at zero additional cost.</div>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-icon">⚡</span>
+      <div class="achievement-number">40%</div>
+      <div class="achievement-title">Manual Effort Reduced</div>
+      <div class="achievement-desc">Deployed Power Automate and Generative AI automation frameworks across enterprise request pipelines at USC.</div>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-icon">🤖</span>
+      <div class="achievement-number">$25K</div>
+      <div class="achievement-title">Annual Savings via AI</div>
+      <div class="achievement-desc">Built AI-powered contract review system reducing review time from 90 minutes to 15 minutes across 500+ contracts annually.</div>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-icon">🏛️</span>
+      <div class="achievement-number">200+</div>
+      <div class="achievement-title">Departments Onboarded</div>
+      <div class="achievement-desc">Spearheaded DocuSign CLM deployment across all USC departments and schools, eliminating paper-based approval cycles.</div>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-icon">☁️</span>
+      <div class="achievement-number">1,000+</div>
+      <div class="achievement-title">Users Migrated to Cloud</div>
+      <div class="achievement-desc">Led Atlassian Server to Cloud migration across 200+ projects with near-zero downtime and zero data loss.</div>
+    </div>
+    <div class="achievement-card">
+      <span class="achievement-icon">🏆</span>
+      <div class="achievement-number">C-Level</div>
+      <div class="achievement-title">Executive Endorsements</div>
+      <div class="achievement-desc">Recognised at USC CIO and President's townhall for platform leadership during COVID. Multiple VP and Director endorsements.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <p class="section-label">Career Journey</p>
+  <h2 class="section-title">Experience</h2>
+  <div class="section-divider"></div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-period">MAR 2021 — JAN 2026 · LOS ANGELES, CA, USA</div>
+        <div class="timeline-role">Enterprise Platform Lead &amp; Technical Program Manager</div>
+        <div class="timeline-company">University of Southern California (USC)</div>
+        <ul class="timeline-highlights">
+          <li>Single-handedly oversaw 7 enterprise cloud platforms simultaneously — $1.4M+ portfolio, 5,000+ users</li>
+          <li>Led Atlassian Server to Cloud migration for 1,000+ users across 200+ projects with near-zero downtime</li>
+          <li>Drove AI-powered automation reducing manual effort by ~40% and saving $25K+ annually</li>
+          <li>Received shoutout at CIO and President's townhall for COVID platform delivery with Deloitte</li>
+          <li>Saved $100K by pushing back on a vendor purchase with a data-driven POC</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-period">MAR 2016 — MAR 2021 · LOS ANGELES, CA, USA</div>
+        <div class="timeline-role">Platform Engineer &amp; Application Program Manager</div>
+        <div class="timeline-company">University of Southern California (USC)</div>
+        <ul class="timeline-highlights">
+          <li>Built Salesforce contact tracing app and student experience portal during COVID in 3 months alongside Deloitte</li>
+          <li>Led DocuSign deployment across 200+ USC departments eliminating paper-based workflows university-wide</li>
+          <li>Built Salesforce to Workday and Kuali Financial Systems integrations using Java/J2EE and REST APIs</li>
+          <li>Reduced KFS application response time by 60-70% through API optimisation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-period">FEB 2015 — MAR 2016 · DENVER, CO, USA</div>
+        <div class="timeline-role">Senior Full-Stack Developer &amp; Integration Engineer</div>
+        <div class="timeline-company">Great-West Financial</div>
+        <ul class="timeline-highlights">
+          <li>Built RESTful web services and AngularJS enterprise integrations for financial services clients</li>
+          <li>Implemented SAML SSO for secure identity federation across enterprise clients</li>
+          <li>Applied MVC architecture and enterprise design patterns for high-volume financial workflows</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-period">MAY 2014 — FEB 2015 · BLOOMINGTON, MN, USA</div>
+        <div class="timeline-role">Java Enterprise Developer</div>
+        <div class="timeline-company">HealthPartners Inc.</div>
+        <ul class="timeline-highlights">
+          <li>Enterprise Java application development in Agile Scrum environment</li>
+          <li>Implemented unit testing and enterprise design patterns improving application reliability</li>
+          <li>Partnered with QA, business analysts, and product teams to deliver healthcare solutions</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <p class="section-label">Expertise</p>
+  <h2 class="section-title">Core Skills</h2>
+  <div class="section-divider"></div>
+  <div class="skills-grid reveal">
+    <div class="skill-category">
+      <div class="skill-cat-title">Program Leadership</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Agile / Scrum / Kanban</span>
+        <span class="skill-tag">PMP-aligned SDLC</span>
+        <span class="skill-tag">Stakeholder Management</span>
+        <span class="skill-tag">Risk Management</span>
+        <span class="skill-tag">Budget Ownership</span>
+        <span class="skill-tag">Cross-timezone Delivery</span>
+        <span class="skill-tag">Vendor Management</span>
+        <span class="skill-tag">Change Management</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Enterprise SaaS</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Salesforce (Admin + Dev)</span>
+        <span class="skill-tag">DocuSign / Iris</span>
+        <span class="skill-tag">Atlassian Jira &amp; Confluence</span>
+        <span class="skill-tag">Hyland OnBase (OCSA)</span>
+        <span class="skill-tag">Smartsheet</span>
+        <span class="skill-tag">ServiceNow</span>
+        <span class="skill-tag">Workday HCM</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Dev &amp; Integration</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Java / J2EE</span>
+        <span class="skill-tag">Apex</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">REST / SOAP APIs</span>
+        <span class="skill-tag">OAuth / SSO / SAML</span>
+        <span class="skill-tag">AWS Cloud Templates</span>
+        <span class="skill-tag">Google Cloud Platform</span>
+        <span class="skill-tag">Visualforce</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">AI &amp; Automation</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Generative AI</span>
+        <span class="skill-tag">Agentic AI</span>
+        <span class="skill-tag">Power Automate</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">DocuSign Iris</span>
+        <span class="skill-tag">Atlassian Intelligence</span>
+        <span class="skill-tag">AI Workflow Automation</span>
+        <span class="skill-tag">LLM Integration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section class="platforms" id="platforms">
+  <p class="section-label">Tools &amp; Platforms</p>
+  <h2 class="section-title">7 Platforms. Simultaneously.</h2>
+  <div class="section-divider"></div>
+  <div class="platforms-grid reveal">
+    <div class="platform-card">
+      <span class="platform-icon">☁️</span>
+      <div class="platform-name">Salesforce</div>
+      <div class="platform-years">Admin + Dev + Apex</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">📋</span>
+      <div class="platform-name">Atlassian</div>
+      <div class="platform-years">Jira · Confluence · Org Admin</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">✍️</span>
+      <div class="platform-name">DocuSign</div>
+      <div class="platform-years">200+ Departments</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">⚙️</span>
+      <div class="platform-name">ServiceNow</div>
+      <div class="platform-years">OAuth Integration</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">📊</span>
+      <div class="platform-name">Smartsheet</div>
+      <div class="platform-years">Enterprise Workflows</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">🗄️</span>
+      <div class="platform-name">Hyland OnBase</div>
+      <div class="platform-years">OCSA Certified</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">👥</span>
+      <div class="platform-name">Workday HCM</div>
+      <div class="platform-years">Integrations</div>
+    </div>
+    <div class="platform-card">
+      <span class="platform-icon">🤖</span>
+      <div class="platform-name">AI Automation</div>
+      <div class="platform-years">Power Automate · GenAI</div>
+    </div>
+  </div>
+</section>
+
+<!-- AI PROJECTS — 3 CARDS -->
+<section class="ai-project" id="project">
+  <p class="section-label">AI &amp; Automation Projects</p>
+  <h2 class="section-title">Built with AI</h2>
+  <div class="section-divider"></div>
+  <div class="projects-grid">
+
+    <!-- Project 1: AIJobBot -->
+    <div class="project-card reveal">
+      <div class="project-badge">PERSONAL PROJECT · 2026</div>
+      <h3 class="project-title">AIJobBot — Intelligent Job Discovery Engine</h3>
+      <p class="project-desc">
+        Built a Python-based AI job discovery bot that scrapes LinkedIn and Indeed daily across 9 target roles and 5 locations. V2 introduced full JD fetching via BeautifulSoup for accurate profile-based scoring — replacing unreliable snippet-only analysis in V1. Delivers ranked daily email digest of top 10 matches automatically every morning.
+      </p>
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="project-metric-value">200+</span>
+          <span class="project-metric-label">Jobs Analysed Daily</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">9</span>
+          <span class="project-metric-label">Target Job Titles</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">2h → 15m</span>
+          <span class="project-metric-label">Search Time Saved</span>
+        </div>
+      </div>
+      <div class="tech-stack">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">JobSpy</span>
+        <span class="tech-badge">BeautifulSoup</span>
+        <span class="tech-badge">SMTP</span>
+        <span class="tech-badge">Schedule</span>
+        <span class="tech-badge">Full JD Analysis</span>
+      </div>
+    </div>
+
+    <!-- Project 2: AI Contract Review -->
+    <div class="project-card reveal">
+      <div class="project-badge">USC ENTERPRISE PROJECT · 2024-2025</div>
+      <h3 class="project-title">AI-Powered Contract Review &amp; Risk Analysis</h3>
+      <p class="project-desc">
+        Designed and implemented an AI-driven contract review system integrated with DocuSign. Contracts uploaded via DocuSign are automatically analysed by AI — extracting key terms, flagging missing clauses, identifying risk areas, and generating a plain English summary for fast approvals. Eliminated the bottleneck of manual legal review for standard vendor and service agreements.
+      </p>
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="project-metric-value">90m → 15m</span>
+          <span class="project-metric-label">Review Time</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">$25K+</span>
+          <span class="project-metric-label">Annual Savings</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">500+</span>
+          <span class="project-metric-label">Contracts / Year</span>
+        </div>
+      </div>
+      <div class="tech-stack">
+        <span class="tech-badge">Generative AI</span>
+        <span class="tech-badge">DocuSign</span>
+        <span class="tech-badge">Power Automate</span>
+        <span class="tech-badge">Prompt Engineering</span>
+        <span class="tech-badge">REST APIs</span>
+      </div>
+    </div>
+
+    <!-- Project 3: License Optimization -->
+    <div class="project-card reveal">
+      <div class="project-badge">USC ENTERPRISE PROJECT · 2024</div>
+      <h3 class="project-title">AI-Driven License Optimisation Across Cloud Platforms</h3>
+      <p class="project-desc">
+        During a university-wide budget freeze, designed and implemented an automated active license checking system using Microsoft Copilot, Power Automate, and custom API integrations across Salesforce, Atlassian, DocuSign, Smartsheet, and ServiceNow. The system identified unused licenses automatically, reclaimed them proactively, and eliminated the need for additional license purchases — delivering measurable cost savings across all platforms.
+      </p>
+      <div class="project-metrics">
+        <div class="project-metric">
+          <span class="project-metric-value">20-30%</span>
+          <span class="project-metric-label">Licensing Cost Saved</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">5</span>
+          <span class="project-metric-label">Platforms Automated</span>
+        </div>
+        <div class="project-metric">
+          <span class="project-metric-value">Zero</span>
+          <span class="project-metric-label">Additional Purchases</span>
+        </div>
+      </div>
+      <div class="tech-stack">
+        <span class="tech-badge">Microsoft Copilot</span>
+        <span class="tech-badge">Power Automate</span>
+        <span class="tech-badge">Custom APIs</span>
+        <span class="tech-badge">Salesforce</span>
+        <span class="tech-badge">Atlassian</span>
+        <span class="tech-badge">ServiceNow</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certifications" id="certifications">
+  <p class="section-label">Professional Development</p>
+  <h2 class="section-title">Education &amp; Certifications</h2>
+  <div class="section-divider"></div>
+  <div class="cert-grid reveal">
+    <div class="cert-card">
+      <span class="cert-status progress">In Progress</span>
+      <div class="cert-name">PMP — Project Management Professional</div>
+      <div class="cert-org">PMI · Expected Aug 2026</div>
+    </div>
+    <div class="cert-card">
+      <span class="cert-status progress">In Progress</span>
+      <div class="cert-name">Salesforce Certified Platform Administrator</div>
+      <div class="cert-org">Salesforce · Expected Sep 2026</div>
+    </div>
+    <div class="cert-card">
+      <span class="cert-status progress">In Progress</span>
+      <div class="cert-name">Salesforce Certified Agentforce Specialist</div>
+      <div class="cert-org">Salesforce · Expected Nov 2026</div>
+    </div>
+    <div class="cert-card">
+      <span class="cert-status completed">Completed</span>
+      <div class="cert-name">OnBase Certified System Administrator (OCSA)</div>
+      <div class="cert-org">Hyland</div>
+    </div>
+    <div class="cert-card">
+      <span class="cert-status completed">Completed</span>
+      <div class="cert-name">Master of Science — Computer Science</div>
+      <div class="cert-org">California State University, Chico · GPA 3.7 / 4.0</div>
+    </div>
+    <div class="cert-card">
+      <span class="cert-status completed">Completed</span>
+      <div class="cert-name">Bachelor of Computer Science</div>
+      <div class="cert-org">University of Pune, India · First Class with Distinction</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="section-divider" style="margin: 20px auto 40px;"></div>
+    <p class="contact-tagline">
+      Senior TPM with 11+ years of US enterprise experience. Available immediately. Open to Pan-India and Remote opportunities globally.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:swapniljoshi1729@gmail.com" class="contact-link">
+        <span>📧</span> swapniljoshi1729@gmail.com
+      </a>
+      <a href="tel:+919371615190" class="contact-link">
+        <span>📞</span> +91 9371615190
+      </a>
+      <a href="https://linkedin.com/in/swapniljoshi7" target="_blank" class="contact-link">
+        <span>💼</span> LinkedIn Profile
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Swapnil Sunil Joshi</div>
+  <div class="footer-copy">Technical Program Manager · Available Immediately · Pune, India</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal, .timeline-item').forEach(el => {
+  observer.observe(el);
+});
+
+document.querySelectorAll('.timeline-item').forEach((item, i) => {
+  item.style.transitionDelay = `${i * 0.15}s`;
+});
+</script>
+</body>
+</html>
