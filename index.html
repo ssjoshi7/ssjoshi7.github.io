@@ -1024,7 +1024,7 @@ footer {
       <div class="project-badge">PERSONAL PROJECT · 2026</div>
       <h3 class="project-title">Multi-Agent IT Helpdesk V3 — Agentic RAG Architecture</h3>
       <p class="project-desc">
-        Evolved the RAG Helpdesk into a multi-agent architecture — a Router Agent classifies intent, a Knowledge Agent handles RAG retrieval from ChromaDB, and a Ticketing Agent logs real support tickets to Airtable via REST API. Each agent has a single responsibility, communicates through shared context, and the system routes intelligently between knowledge retrieval and action execution.
+        Evolved the RAG Helpdesk into a production-style multi-agent architecture with three specialized agents — a Router Agent classifies intent with confidence scoring, a Knowledge Agent handles RAG retrieval from ChromaDB with answerability checks, and a Ticketing Agent logs real support tickets to Airtable via REST API. V3.1 introduced confidence-aware routing with a 90% threshold for external actions, conversation history tracking for accurate issue extraction, a three-state intent model (KNOWLEDGE/TICKET/CLARIFY), and human-in-the-loop confirmation before ticket creation — ensuring the system never performs external actions without explicit user intent.
       </p>
       <div class="project-metrics">
         <div class="project-metric">
