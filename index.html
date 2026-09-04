@@ -1024,22 +1024,22 @@ footer {
       <div class="project-badge">PERSONAL PROJECT · 2026</div>
       <h3 class="project-title">Multi-Agent IT Helpdesk V3 — Agentic RAG Architecture</h3>
       <p class="project-desc">
-        Evolved the RAG Helpdesk into a production-style multi-agent architecture with three specialized agents — a Router Agent classifies intent with confidence scoring, a Knowledge Agent handles RAG retrieval from ChromaDB with answerability checks, and a Ticketing Agent logs real support tickets to Airtable via REST API. V3.1 introduced confidence-aware routing with a 90% threshold for external actions, conversation history tracking for accurate issue extraction, a three-state intent model (KNOWLEDGE/TICKET/CLARIFY), and human-in-the-loop confirmation before ticket creation — ensuring the system never performs external actions without explicit user intent.
+        Evolved the RAG Helpdesk into a production-minded multi-agent system across multiple versions — V3 introduced Router, Knowledge, and Ticketing agents; V3.1 added confidence-aware routing, a CLARIFY state, conversation history, human-in-the-loop confirmation, and Google OAuth/OIDC authentication. V4 added retrieval logging, similarity thresholding, a structured JSONL knowledge base, metadata-aware retrieval, Claude-powered reranking, explicit workflow states, duplicate ticket protection, role-based access control, observability metrics, Pinecone cloud vector storage, and Jira Service Management integration — replacing Airtable with enterprise ITSM ticketing.
       </p>
       <div class="project-metrics">
-        <div class="project-metric">
+      <div class="project-metric">
           <span class="project-metric-value">3</span>
           <span class="project-metric-label">Specialized Agents</span>
-        </div>
-        <div class="project-metric">
-          <span class="project-metric-value">Real-time</span>
-          <span class="project-metric-label">Ticket Logging</span>
-        </div>
-        <div class="project-metric">
-          <span class="project-metric-value">Zero</span>
-          <span class="project-metric-label">Hallucinations</span>
-        </div>
       </div>
+      <div class="project-metric">
+          <span class="project-metric-value">100%</span>
+          <span class="project-metric-label">Eval Pass Rate</span>
+      </div>
+      <div class="project-metric">
+          <span class="project-metric-value">6</span>
+          <span class="project-metric-label">V4 Enhancements</span>
+      </div>
+    </div>
       <div class="tech-stack">
         <span class="tech-badge">Python</span>
         <span class="tech-badge">Multi-Agent</span>
@@ -1048,6 +1048,10 @@ footer {
         <span class="tech-badge">Airtable REST API</span>
         <span class="tech-badge">Streamlit</span>
         <span class="tech-badge">RAG</span>
+        <span class="tech-badge">Pinecone</span>
+        <span class="tech-badge">JSM</span>
+        <span class="tech-badge">RBAC</span>
+        <span class="tech-badge">Observability</span>
       </div>
       <a href="https://ssjoshi7-rag-multiagent.streamlit.app" target="_blank" class="tech-badge" style="text-decoration:none;">🤖 Live Demo →</a>
       <a href="https://github.com/ssjoshi7/enterprise-rag-helpdesk" target="_blank" class="tech-badge" style="text-decoration:none;">📂 GitHub →</a>
